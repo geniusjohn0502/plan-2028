@@ -47,9 +47,20 @@
     font-size: .85rem; padding: 4px 14px; border-radius: 999px; margin-bottom: 20px;
     letter-spacing: .1em;
   }
-  .hero h1 { font-size: 1.75rem; line-height: 1.5; letter-spacing: .03em; }
-  .hero h1 .hl { color: var(--gold-light); }
-  .hero p.lead { margin: 18px auto 30px; font-size: 1.02rem; color: #d8e0ec; max-width: 30em; }
+  .hero h1 {
+    font-size: clamp(1.6rem, 7.6vw, 2.3rem); line-height: 1.4; letter-spacing: .04em;
+    color: var(--gold-light); font-weight: 900; white-space: nowrap;
+  }
+  .hero p.hook {
+    margin-top: 20px; font-size: 1.25rem; font-weight: 700;
+    line-height: 1.6; letter-spacing: .03em; color: #fff;
+  }
+  .hero p.hook .hl {
+    color: var(--gold-light);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 2px;
+  }
+  .hero p.lead { margin: 20px auto 30px; font-size: 1.02rem; color: #d8e0ec; max-width: 30em; }
   .btn {
     display: inline-block; text-decoration: none; font-weight: 700;
     border-radius: 999px; padding: 14px 34px; font-size: 1.05rem;
@@ -256,7 +267,8 @@
 <header class="hero">
   <div class="wrap">
     <span class="tag">給 25–30 歲上班族的資產加速計畫</span>
-    <h1>每月存 1 萬，三年後只有 36 萬。<br>同樣的 1 萬，換個方法，<br><span class="hl">三年後有機會是 100 萬。</span></h1>
+    <h1>三年百萬槓桿加速計劃</h1>
+    <p class="hook">每月存 1 萬，三年後只有 36 萬。<br>同樣的 1 萬，換個方法，<br><span class="hl">三年後有機會是 100 萬。</span></p>
     <p class="lead">你不需要加班兼差、不用學看盤，只要把「死存錢」升級成有錢人都在用的「生命週期投資法」，讓未來的錢提早為你工作。</p>
     <a class="btn btn-ghost" href="#method">看計畫怎麼進行</a>
   </div>
