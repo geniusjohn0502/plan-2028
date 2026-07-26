@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# 改版暫存備份（git 歷史已可還原，不需另存 .bak）
+*.bak
+*.html.bak
