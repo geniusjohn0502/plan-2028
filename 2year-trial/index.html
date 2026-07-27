@@ -333,6 +333,17 @@
       padding-bottom: 10px; border-bottom: 2px solid var(--gold); letter-spacing: .02em; }
     .plan-col .offer-list { margin-bottom: 28px; }
     @media (max-width: 900px) { .plan-grid { grid-template-columns: 1fr; gap: 46px; } }
+    /* 「兩年後我們將一起實現」獨立成跨欄亮點區 */
+    .achieve-hero { margin-top: 46px; padding: 34px 38px;
+      border: 2px solid var(--gold); box-shadow: 0 6px 24px rgba(201,162,39,.13); }
+    .achieve-hero h3 { text-align: center; font-size: 1.22rem; margin-bottom: 8px; }
+    .achieve-hero .hero-sub { text-align: center; font-size: .88rem; color: #8a7c52;
+      margin-bottom: 22px; letter-spacing: .04em; }
+    .achieve-hero ol { font-size: 1rem; line-height: 1.75; max-width: 760px; margin: 0 auto; }
+    .achieve-hero ol li { margin-bottom: 14px; }
+    .achieve-hero ol li::marker { color: var(--gold); font-weight: 800; }
+    @media (max-width: 560px) { .achieve-hero { padding: 26px 20px; } }
+
 </style>
 </head>
 <body>
@@ -496,16 +507,18 @@
       <div class="offer"><span class="ico">💬</span><div><b>兩年無限次 LINE 問答</b><p>任何財務疑難雜症，我陪你一起解決。</p></div></div>
       <div class="offer"><span class="ico">📊</span><div><b>專屬淨值追蹤表</b><p>資產增長視覺化，讓你每一分努力都有感。</p></div></div>
     </div>
-    <div class="achieve">
-      <h3>兩年後，我們將一起實現：</h3>
-      <ol>
-        <li>提早放大的優質資產部位（0050），持續幫你複利增值</li>
-        <li>熟悉信貸與質押操作，學會受用一輩子的槓桿投資法，具備自行調節槓桿的能力，財商超越同齡人</li>
-        <li>優良信用體質，讓之後買房、青創貸款更輕鬆</li>
-      </ol>
-    </div>
       </div>
     </div>
+
+      <div class="achieve achieve-hero">
+      <h3>🎯 兩年後，我們將一起實現</h3>
+        <p class="hero-sub">這是這趟旅程的終點，也是你的起點</p>
+      <ol>
+      <li>提早放大的優質資產部位（0050），加速複利，為第一桶金打好基礎</li>
+      <li>熟悉信貸與質押操作，學會受用一輩子的槓桿投資法，具備自行調節槓桿的能力，財商超越同齡人</li>
+      <li>優良信用體質，讓之後買房、青創貸款更輕鬆</li>
+      </ol>
+      </div>
   </div>
 </section>
 
