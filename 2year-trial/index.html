@@ -344,6 +344,41 @@
     .achieve-hero ol li::marker { color: var(--gold); font-weight: 800; }
     @media (max-width: 560px) { .achieve-hero { padding: 26px 20px; } }
 
+    /* ── 對比長條圖（直式堆疊）── */
+    .barchart { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; max-width: 560px; margin: 0 auto; }
+    .bc-col { display: flex; flex-direction: column; align-items: center; }
+    .bc-badge-row { min-height: 34px; display: flex; align-items: center; }
+    .bc-badge { display: inline-block; font-size: .78rem; font-weight: 800; letter-spacing: .04em;
+      color: var(--navy); background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      border-radius: 999px; padding: 5px 14px; box-shadow: 0 3px 12px rgba(201,162,39,.35); }
+    .bc-top { display: flex; align-items: baseline; gap: 2px; margin-bottom: 10px; color: #d8e0ec; }
+    .bc-top .bc-num { font-size: 2rem; font-weight: 900; font-family: Georgia, "Times New Roman", serif; }
+    .bc-top .bc-unit { font-size: .95rem; }
+    .bc-top.bc-hot { color: var(--gold-light); }
+    .bc-top.bc-hot .bc-num { font-size: 2.9rem; }
+    .bc-track { height: 260px; width: 100%; display: flex; align-items: flex-end;
+      border-bottom: 1px solid #ffffff26; }
+    .bc-bar { width: 100%; border-radius: 10px 10px 0 0; overflow: hidden;
+      display: flex; flex-direction: column; }
+    .bc-self { background: linear-gradient(180deg, #4a5f80, #35496a);
+      align-items: center; justify-content: center; }
+    .bc-plan { height: 100%; }
+    .bc-seg { display: flex; align-items: center; justify-content: center; }
+    .bc-debt { background: repeating-linear-gradient(135deg, #ffffff26 0 7px, #ffffff0f 7px 14px);
+      border-bottom: 1px dashed #ffffff40; }
+    .bc-net { background: linear-gradient(180deg, var(--gold-light), var(--gold)); }
+    .bc-lab { font-size: .76rem; font-weight: 700; color: #fff; text-align: center; padding: 0 4px; }
+    .bc-net .bc-lab { color: #3a2f08; }
+    .bc-name { font-size: .9rem; font-weight: 700; color: #fff; margin-top: 12px; text-align: center; }
+    .bc-sub { font-size: .76rem; color: #aebad0; margin-top: 4px; text-align: center; line-height: 1.5; }
+    .bc-punch { text-align: center; font-size: 1rem; color: #e8eef7; margin: 26px auto 8px; max-width: 620px; line-height: 1.7; }
+    .bc-punch b { color: var(--gold-light); font-size: 1.25rem; }
+    @media (max-width: 560px) {
+      .barchart { gap: 14px; }
+      .bc-track { height: 210px; }
+      .bc-top.bc-hot .bc-num { font-size: 2.3rem; }
+      .bc-lab { font-size: .7rem; }
+    }
 </style>
 </head>
 <body>
@@ -404,19 +439,31 @@
     </div>
 
     <h3 class="group">同樣月投入 1 萬，兩年後差多少？</h3>
-    <div class="sim-cards">
-      <div class="sim">
-        <div class="name">自己定期定額</div>
-        <div class="big">約 26 萬</div>
-        <div class="note">月存 1 萬慢慢買<br>無負債・淨值 26 萬</div>
+    <div class="barchart">
+      <div class="bc-col">
+        <div class="bc-badge-row"></div>
+        <div class="bc-top"><span class="bc-num">26</span><span class="bc-unit">萬</span></div>
+        <div class="bc-track">
+          <div class="bc-bar bc-self" style="height:29.9%"><span class="bc-lab">淨值 26 萬</span></div>
+        </div>
+        <div class="bc-name">自己定期定額</div>
+        <div class="bc-sub">月存 1 萬慢慢買・無負債</div>
       </div>
-      <div class="sim hot">
-        <div class="name">執行本計畫（雙槓桿）</div>
-        <div class="big">總資產約 87 萬</div>
-        <div class="note">信貸餘額約 55 萬・淨值約 32 萬<br>從第一天就用 75 萬滾複利</div>
+      <div class="bc-col">
+        <div class="bc-badge-row"><span class="bc-badge">資產部位 ×3.3</span></div>
+        <div class="bc-top bc-hot"><span class="bc-num">87</span><span class="bc-unit">萬</span></div>
+        <div class="bc-track">
+          <div class="bc-bar bc-plan">
+            <div class="bc-seg bc-debt" style="height:63.2%"><span class="bc-lab">信貸 55 萬</span></div>
+            <div class="bc-seg bc-net" style="height:36.8%"><span class="bc-lab">淨值 32 萬</span></div>
+          </div>
+        </div>
+        <div class="bc-name">執行本計畫（雙槓桿）</div>
+        <div class="bc-sub">從第一天就用 75 萬滾複利</div>
       </div>
     </div>
-    <p class="sim-foot">兩年時點兩者淨值差距不大，但執行計畫的資產部位大 3 倍，往後每年的複利差距會持續拉開。<br>試算條件：0050 假設年化報酬 8%（含息）；信貸 75 萬、利率 3%、7 年攤還；股票質押成數 50%、利率 2.8%。以上為模擬估算，非保證報酬。</p>
+    <p class="bc-punch">兩年後，你的複利基數是 <b>3.3 倍</b>——這才是差距真正開始拉開的起點。</p>
+    <p class="sim-foot">試算條件：0050 假設年化報酬 8%（含息）；信貸 75 萬、利率 3%、7 年攤還；股票質押成數 50%、利率 2.8%。以上為模擬估算，非保證報酬。</p>
 
     <h3 class="group">學員真實成果</h3>
     <p class="group-note">真實成果與對話截圖（已匿名處理）</p>
