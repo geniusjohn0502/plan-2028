@@ -403,6 +403,12 @@
     .sim-panel .bc-punch b { color: #a8841c; }
     .sim-panel .sim-foot { color: #8a93a0; margin-bottom: 0; }
     @media (max-width: 560px) { .sim-panel { padding: 28px 18px 22px; } }
+    /* ── 修正：數字行高溢出撞徽章／文案孤字 ── */
+    .bc-badge-row { min-height: 40px; }
+    .bc-top .bc-num { line-height: 1; }
+    .bc-top .bc-unit { line-height: 1; }
+    .sim-panel .bc-top { height: 60px; padding-bottom: 2px; }
+    .bc-punch { text-wrap: balance; max-width: 580px; }
 </style>
 </head>
 <body>
