@@ -379,6 +379,30 @@
       .bc-top.bc-hot .bc-num { font-size: 2.3rem; }
       .bc-lab { font-size: .7rem; }
     }
+    /* ── 對比試算：淺色面板（深底中的聚光燈）── */
+    .sim-panel { background: #fff; border-radius: 22px; padding: 38px 34px 30px;
+      box-shadow: 0 14px 40px rgba(0,0,0,.28); margin: 6px 0 8px; }
+    .sim-panel .panel-title { text-align: center; font-size: 1.12rem; color: var(--navy);
+      margin: 0 0 6px; letter-spacing: .01em; }
+    .sim-panel .panel-title::after { content: ""; display: block; width: 44px; height: 3px;
+      background: var(--gold); border-radius: 2px; margin: 12px auto 26px; }
+    /* 數字列固定高度 → 兩根長條底部對齊 */
+    .sim-panel .bc-top { height: 68px; align-items: flex-end; justify-content: center;
+      margin-bottom: 12px; color: #6b7788; }
+    .sim-panel .bc-top.bc-hot { color: #a8841c; }
+    .sim-panel .bc-track { border-bottom: 1px solid #d7dde6; }
+    /* 長條配色反轉為淺底 */
+    .sim-panel .bc-self { background: linear-gradient(180deg, #ccd5e2, #aeb9ca); }
+    .sim-panel .bc-self .bc-lab { color: #2c3a4f; }
+    .sim-panel .bc-debt { background: repeating-linear-gradient(135deg, #0b1f3a1f 0 7px, #0b1f3a0a 7px 14px);
+      border-bottom: 1px dashed #0b1f3a40; }
+    .sim-panel .bc-debt .bc-lab { color: #2c3a4f; }
+    .sim-panel .bc-name { color: var(--navy); }
+    .sim-panel .bc-sub { color: var(--muted); }
+    .sim-panel .bc-punch { color: var(--ink); }
+    .sim-panel .bc-punch b { color: #a8841c; }
+    .sim-panel .sim-foot { color: #8a93a0; margin-bottom: 0; }
+    @media (max-width: 560px) { .sim-panel { padding: 28px 18px 22px; } }
 </style>
 </head>
 <body>
@@ -438,7 +462,8 @@
       <div class="mcard"><h3><span class="n">05</span>信用養成</h3><p>教你培養信用、跟銀行打交道，從「信用小白」變成「優質客戶」，為未來創業、買房養好信用體質。</p></div>
     </div>
 
-    <h3 class="group">同樣月投入 1 萬，兩年後差多少？</h3>
+    <div class="sim-panel">
+      <h3 class="panel-title">同樣月投入 1 萬，兩年後差多少？</h3>
     <div class="barchart">
       <div class="bc-col">
         <div class="bc-badge-row"></div>
@@ -464,6 +489,7 @@
     </div>
     <p class="bc-punch">兩年後，你的複利基數是 <b>3.3 倍</b>——這才是差距真正開始拉開的起點。</p>
     <p class="sim-foot">試算條件：0050 假設年化報酬 8%（含息）；信貸 75 萬、利率 3%、7 年攤還；股票質押成數 50%、利率 2.8%。以上為模擬估算，非保證報酬。</p>
+    </div>
 
     <h3 class="group">學員真實成果</h3>
     <p class="group-note">真實成果與對話截圖（已匿名處理）</p>
