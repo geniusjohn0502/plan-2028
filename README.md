@@ -4,7 +4,7 @@
 
 | 版本 | 用途 | 網址 |
 | :--- | :--- | :--- |
-| **三個月理財陪跑**（$8,000） | **前端入門**・成交輔助頁（聊過之後給對方看） | https://geniusjohn0502.github.io/plan-2028/3month/ |
+| **三個月理財陪跑**（$8,000） | **前端入門**・成交輔助頁（聊過之後給對方看） | **https://3month.morechoice.net**（2026-10-14 搬出去獨立成 `geniusjohn0502/3month`，本機 `~/Documents/3month`；這裡的 `3month/` 只剩一個自動跳轉頁） |
 | **兩年・完整版**（$19,800／老學員 $16,800） | **成交用**（諮詢中要報價時） | https://geniusjohn0502.github.io/plan-2028/2year/ |
 | **兩年・無報價版** | **給諮詢後的學員參考**（無定價、無 FAQ） | https://geniusjohn0502.github.io/plan-2028/2year-info/ |
 | 三年百萬計畫 | 舊版，去留待議 | https://geniusjohn0502.github.io/plan-2028/ |
@@ -20,14 +20,11 @@ plan-2028/
 ├── index.html            三年百萬計畫（舊結構，尚未改版）
 ├── 2year/index.html      兩年槓桿加速計畫・完整版
 ├── 2year-info/index.html 兩年槓桿加速計畫・無報價版
-├── 3month/
-│   ├── index.html        三個月理財陪跑
-│   ├── about.jpg         About 區的個人照
-│   └── 見證/01.jpg…10.jpg  學員 LINE 對話截圖（學員皆已同意公開）
+├── 3month/index.html     ⚠️ 只是跳轉頁，把舊連結轉到 3month.morechoice.net（正本在 ~/Documents/3month）
 └── 見證素材/              兩年版的學員截圖原圖（已壓縮內嵌進 HTML）
 ```
 
-**圖片處理方式兩頁不同**：兩年版是 base64 內嵌進 HTML；三個月版是外部檔案引用（改圖不用重新編碼，且有 `loading="lazy"`）。
+兩年版的圖片是 base64 內嵌進 HTML。
 
 ---
 
@@ -41,9 +38,9 @@ plan-2028/
 
 兩者唯一差別：無報價版**切掉「價值堆疊＋定價＋滿意保證」與「常見問題」兩個 section**，頁面結束在「誰不適合參加」。改完請確認無報價版沒有殘留：`19,800`／`16,800`／`老學員`／`優惠價`／`總價值`／`滿意保證`／`常見問題`。
 
-### 三個月版：HTML 與 md 文案要一起改
+### 三個月版：已搬家，不要在這裡改
 
-三個月版只有一個 HTML，但**文案基準在私有 repo 的 md 檔**。兩邊都要改，否則下次改版會拿到過期的文案。
+2026-10-14 起三個月版的正本在 `~/Documents/3month`（對外 https://3month.morechoice.net），改版規則見那邊的 README。這裡的 `3month/index.html` 只負責轉址。
 
 ### 這是公開 repo
 
