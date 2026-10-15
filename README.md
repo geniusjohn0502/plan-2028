@@ -50,11 +50,11 @@ plan-2028/
 
 ## 🛠 改版流程
 
-本機資料夾：`~/Documents/plan-2028`
+本機資料夾：`~/Documents/網頁與程式/兩年計畫網頁`（2026-10-15 從 `~/Documents/plan-2028` 搬過來）
 （2026-08-02 起：原本放在已解散的 John-Vault 內，現已獨立成單一 repo）
 
 ```bash
-cd ~/Documents/plan-2028
+cd ~/Documents/網頁與程式/兩年計畫網頁
 # 改完 HTML 之後：
 git add -A && git commit -m "說明" && git push
 # GitHub Pages 自動重建，約 30 秒～2 分鐘後生效
